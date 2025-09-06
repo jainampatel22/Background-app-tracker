@@ -11,7 +11,9 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@lwtlab/node-mac-app-icon": "^0.1.0",
     "active-win": "^8.2.1",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "iconv": "^3.0.1"
   }

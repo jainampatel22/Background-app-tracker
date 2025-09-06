@@ -15,6 +15,7 @@ try {
                const iconBuffer = await getAppIconByPid(pid);
             iconBase64 = iconBuffer.toString('base64');
             console.log(`Fetched icon for: ${last_app}`);
+            console.log(iconBase64)
             
          } catch (error) {
             console.error("Error fetching icon:", error.message);
