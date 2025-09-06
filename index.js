@@ -4,14 +4,22 @@ const app = express();
 app.use(express.json());
 
 let currentApp = null;
+let currentIcon = null; 
 
 app.post("/update", (req, res) => {
-  currentApp = req.body.activeApp;
-  res.json({ success: true, activeApp: currentApp });
+ 
+  const { activeApp, icon } = req.body;
+
+
+  currentApp = activeApp;
+  currentIcon = icon;
+
+  res.json({ success: true, activeApp: currentApp, icon: currentIcon });
 });
 
 app.get("/track", (req, res) => {
-  res.json({ activeApp: currentApp });
+
+  res.json({ activeApp: currentApp, icon: currentIcon });
 });
 
 app.listen(8000, () => console.log("Server running on port 8000"));
