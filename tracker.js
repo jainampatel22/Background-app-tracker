@@ -40,7 +40,7 @@ setInterval(async () => {
         if (currentApp !== last_app) {
             last_app = currentApp;
             last_switch_time= Date.now()
-
+            console.log(last_switch_time)
             const payload = {
                 activeApp: last_app,
                 icon: iconBase64,
@@ -54,6 +54,7 @@ setInterval(async () => {
             });
 
             console.log("Updated:", last_app);
+            
         }
 
     } catch (error) {
